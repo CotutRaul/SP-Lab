@@ -4,30 +4,38 @@ import java.util.List;
 public class Book {
     String title;
 
-    List<String> text;
-
+    List<Author> authors;
+    List<Chapter> chapters;
     public Book() {
     }
 
     public Book(String title) {
         this.title = title;
-        text = new ArrayList<>();
+        authors = new ArrayList<>();
+        chapters = new ArrayList<>();
     }
 
-    public void createNewParagraph(String paragraph) {
-        text.add("Paragraph: " + paragraph);
+    public void addAuthor(Author author) {
+        authors.add(author);
     }
 
-    public void createNewImage(String image) {
-        text.add("Image: " + image);
+    public void print() {
+        System.out.println("Book{" +
+                "title='" + title + '\'' +
+                ", authors=");
+        authors.forEach(Author::print);
+        System.out.println("\n chapters=");
+        chapters.forEach(Chapter::print);
+        System.out.println('}');
     }
 
-    public void createNewTable(String table) {
-        text.add("Table: " + table);
+    public int createChapter(String chapter) {
+        Chapter chp = new Chapter(chapter);
+        chapters.add(chp);
+        return chapters.size()-1;
     }
 
-    public void print(){
-        System.out.println(title);
-        text.forEach(System.out::println);
+    public Chapter getChapter(int indexChapter) {
+        return chapters.get(indexChapter);
     }
 }
