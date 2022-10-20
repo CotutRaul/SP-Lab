@@ -1,4 +1,4 @@
-public class Table {
+public class Table implements Element{
     private String title;
 
     public Table(String title) {
@@ -6,8 +6,6 @@ public class Table {
     }
 
     public void print() {
-        System.out.println( "Table{" +
-                "title='" + title + '\'' +
-                '}');
+        System.out.println( "Table:" + title );
     }
 }
