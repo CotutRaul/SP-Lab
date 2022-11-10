@@ -20,4 +20,9 @@ public class ImageProxy implements Element{
         loadImage();
         realImage.print();
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImageProxy(this);
+    }
 }

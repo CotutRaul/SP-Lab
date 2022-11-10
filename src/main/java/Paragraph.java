@@ -19,4 +19,9 @@ public class Paragraph implements Element{
 
         }
     }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitParagraph(this);
+    }
 }
