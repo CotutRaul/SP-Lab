@@ -41,6 +41,11 @@ public class BookStatistics implements Visitor{
         tables++;
     }
 
+    @Override
+    public void visitContent(TableOfContent tableOfContent) {
+
+    }
+
 
     public void printStatistics() {
         System.out.println("Book Statistics:");

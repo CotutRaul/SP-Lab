@@ -28,4 +28,7 @@ public class Section implements Element{
         elements.add(element);
     }
 
+    public String getName() {
+        return name;
+    }
 }
