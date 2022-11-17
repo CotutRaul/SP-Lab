@@ -14,6 +14,12 @@ public class Book extends Section {
         authors.add(author);
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitBook(this);
+        super.accept(visitor);
+    }
+
     public void print() {
         System.out.println("Authors:");
         authors.forEach(Author::print);
