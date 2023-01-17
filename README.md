@@ -1,2 +1,3 @@
-# SP-Lab
-Facultate - Sabloane de Proiectare
+# Nota finala: 9
+Nota test: 10
+Nota proiect: 8
